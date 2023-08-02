@@ -77,3 +77,82 @@ for i in range(len(lista)):
     
     print(lista[i])#Vamos imprimir a lista na posição 'i'
 # Agora será impresso todos os itens da nossa lista pelos indices;
+
+
+
+# > Metodos de listas
+
+lista = [1, 5, 6, 8, 95, 45]
+
+print(lista) # Estamos imprimindo a lista inteira sem separação;
+
+
+# append
+lista.append(3) # estamos informando que vamos adicionar um numero a talbela so que ele ira para o final da tabela;
+
+print('Depois do append:', lista)
+
+
+# inset
+lista.insert(1, 3) # estamos adicionando um objeto na lista, neste caso o primeiro numero informado significa o local aonde vai ficar o objeto, depois o segundo item que vem seprado por virgula sera indexada na posição que pedimos, neste calo ele ira adicionar o numero 3 na posição 1 da tabela;
+
+print('Depois do insert:', lista)
+
+
+# extend
+lista1 = [35, 37, 40, 45, 35]
+lista2 = [49, 53, 56]
+
+lista1.extend(lista2) # comando extend fara a junção das listas neste caso a lista1() ira receber a lista2(), tudo que for da lista2 ira para o final da lista1(), isso fara junção das duas tabelas;
+
+print('Depois do extend: ', lista1)
+
+#pop (remover elemento);
+lista.pop() #veja que não foi informado um valor neste caso sera removido automaticamente o ultimo item da lista;
+
+print('Lista após o pop:', lista)
+
+lista.pop(2)# neste caso eu estou definindo o local a qual quero remover o objeto da lista, informando o valor do array como 2 então ira eliminar o 3° ojeto da lista;
+
+print('Lista após o pop:', lista)
+
+# remove
+lista1.remove(35) # neste caso ele e mais especifico que o .pop() pois ele elimina pelo nome do objeto, podendo informar um int(), str(), float(), bool(), lembrando que o mesmo ira eliminar o primeiro que encontrar, então se você que eliminar o nome Mateus da lista e contem 2 Mateus recomendo usar o pop se caso quiser eliminar o segundo Mateus;
+
+print('Depois do remove:', lista1)
+
+# count
+
+print('Quantidade de 35 na lista:', lista1.count(35)) #neste caso vamos contar quantas vezes o int 35 aparece na lista, como sabemos ele vai retornar o valor 2 pois contem 2 numeros 35;
+
+# index
+
+print('Índice do elemento 40:', lista1.index(40)) # aqui ele vai nos informar o indice do objeto a qual buscarmos sendo ele, int, str, float ou bool.
+
+# exemplo: lista = [10, 20, 30], usando o .index(20) ele vai nos voltar o valor 1 pois e a posição exata do indice 20, ja que iniciamos com o numero 0;
+
+#sort
+
+lista.sort() # neste caso sem informar nenhum parametro vamos receber a lista organizada de forma crescente;
+print(lista)
+
+lista.sort(reverse=True) # ja neste caso usando o reverse=True, estamos pedindo para a listar ser exibida de maneira decrescente;
+print(lista)
+
+# FUNÇÕES PARA LISTAS
+
+# len
+print(len(lista))
+# usada para saber quantos elementos contém em nossa lista;
+
+#sum
+print(sum(lista))
+# usada para somar todos os elementos da nossa lista;
+
+#max
+print('Maior elemento da Lista:', max(lista))
+# como o proprio nome sugere estamos pedindo o maior elemento desta lista ou seja o maior valor dela;
+
+#min
+print('Menor elemento da Lista:', min(lista))
+# como o proprio nome sugere estamos pedindo o menor elemento da nossa lista;
